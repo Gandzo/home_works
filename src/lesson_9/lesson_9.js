@@ -14,21 +14,21 @@ function notificationBar() {
 }
 notificationBar();
 
-// const someBtn = document.querySelector('button');
-// const btn = document.querySelector('.btn-hello');
-// console.dir(someBtn);
-//
-// function greet() {
-//     const name = prompt ('Hello world');
-// someBtn.classList.add('btn_touct hed')
-//     // someBtn.style.background = 'red';
-//     alert(`Hello, ${name} !`);
-// }
-// someBtn.addEventListener('click', greet);
-//
-// function hello() {
-//     alert('Hello');
-// }
-// btn.addEventListener('click', hello);
-//
+const someBtn = document.querySelector('button');
+const btn = document.querySelector('.btn-hello');
+console.dir(someBtn);
+
+function greet() {
+    const name = prompt ('Hello world');
+someBtn.classList.add('.btn_toucthed');
+    // someBtn.style.background = 'red';
+    alert(`Hello, ${name} !`);
+}
+someBtn.addEventListener('click', greet);
+
+function hello() {
+    alert('Hello');
+}
+btn.addEventListener('click', hello);
+
 
