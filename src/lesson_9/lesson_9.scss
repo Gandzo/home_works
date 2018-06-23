@@ -1,3 +1,20 @@
 body {
   background-color: #1fdb84;
 }
+
+.btn {
+  background: aqua;
+  &_touched {
+    background: green;
+  }
+}
+.notification-bar {
+  &__message {
+    display: none;
+  }
+  &_active {
+    .notification-bar__message {
+      display: block;
+    }
+  }
+}
