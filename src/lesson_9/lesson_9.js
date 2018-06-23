@@ -20,7 +20,7 @@ notificationBar();
 //
 // function greet() {
 //     const name = prompt ('Hello world');
-// someBtn.classList.add('btn_touched')
+// someBtn.classList.add('btn_touct hed')
 //     // someBtn.style.background = 'red';
 //     alert(`Hello, ${name} !`);
 // }
