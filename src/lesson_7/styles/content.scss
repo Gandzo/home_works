@@ -1,0 +1,132 @@
+@import "./variables.scss";
+.content {
+  width: 100%;
+  background-color: #f8f9fc;
+}
+.benefits {
+  @include pageContainer;
+  height: 420px;
+  border-radius: 10px;
+  background-color: $btn-default-font-color;
+  box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+  @include flexCenterVertical;
+  justify-content: space-around;
+  transform: translateY(-25%);
+  &__item {
+    height: 63%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px ;
+  }
+  &__icon {
+    margin-bottom: 5px;
+  }
+  &__line {
+    width: 60px;
+    height: 4px;
+    background-color: #1fdb84;
+  }
+  &__header {
+    font-size: 18px;
+    font-weight: 500;
+    color: #031d5b;
+  }
+  &__title {
+    line-height: 2;
+    color: #5b6c94;
+  }
+}
+
+
+.tariff {
+  @include pageContainer;
+  @include flexCenterVertical;
+  flex-direction: column;
+  justify-content: space-between;
+  &__header {
+    font-size: 2.5rem;
+    line-height: 1.6;
+    color: #32325c;
+    text-align: center;
+
+  }
+  &__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    & span{
+      letter-spacing: 2px;
+      color: #6fdeaa;
+    }
+  }
+  &__radio {
+    background-color: #f1fff8;
+    padding: 1.3rem 2rem;
+    border: solid 1px #aefdd9;
+  }
+
+  &__btns input[type="radio"] {
+    display: none;
+  }
+  &__btns label + input[type="radio"]:checked {
+    background-color: #ffffff !important;
+  }
+
+  &__btn_small {
+    border-top-left-radius: $btn-default-border-radius;
+    border-bottom-left-radius: $btn-default-border-radius
+  }
+  &__btn_big {
+    border-top-right-radius: $btn-default-border-radius;
+    border-bottom-right-radius: $btn-default-border-radius;
+  }
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.tariff__btns input:checked + span {
+   background-color: #ffffff;
+  }
+.card {
+  width: 375px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 55px 0;
+  letter-spacing: 0.2px;
+  color: #5b6c94;
+  transition: 0.4s;
+  &:hover {
+    background-color: #fff;
+    border-top: 3px solid  #0a8aff;
+    cursor: pointer;
+
+  }
+  &__header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    color: #32325c;
+
+
+
+  }
+  &__price {
+    font-size: 4.5rem;
+    color: #1fdb84;
+  }
+  &__text {
+    margin: 30px 0 30px;
+
+  }
+  &__text li {
+    text-align: center;
+    padding-bottom: 1rem;
+
+  }
+}

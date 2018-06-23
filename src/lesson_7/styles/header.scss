@@ -1,0 +1,80 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+$navbar-height: 110px;
+$page-nav-item-margin: 30px;
+$page-nav-link-color: #ffffff;
+$logo-font-size: 26px;
+
+
+.page-header {
+  background-color: $background-dark;
+  position: relative;
+
+}
+.page-nav {
+  height: $navbar-height ;
+  display: flex;
+  justify-content: space-between;
+ @include pageContainer;
+  padding: 0 $page-container-padding;
+  &__logo {
+    color: $page-nav-link-color;
+    font-size: $logo-font-size ;
+    font-weight: normal;
+    @include flexCenterVertical;
+  }
+  &__toggle {
+    display: none;
+  }
+  &__menu {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    margin: 0 $page-nav-item-margin;
+    display: flex;
+  }
+  &__link {
+    color: $page-nav-link-color;
+    @include flexCenterVertical;
+    justify-content: center;
+  }
+}
+.account-panel {
+  display: flex;
+  align-items: center;
+  &__btn {
+    margin: 0;
+  }
+}
+.baner {
+  display: flex;
+  justify-content: space-between;
+  @include pageContainer;
+
+  &__img {
+    width: 465px;
+    height: 792px;
+    background-image: url('../../assets/images/lesson_7/artboard@2x.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 20px;
+  }
+
+  &__main-header {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 150px 0 40px;
+  }
+  &__text {
+    line-height: 2;
+  }
+  &__btn {
+    margin-top: 70px;
+  }
+}
+.baner__info {
+  color: $page-nav-link-color;
+}
+
