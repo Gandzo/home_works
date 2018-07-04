@@ -9,12 +9,34 @@
   display: flex;
   align-items: center;
 }
+@mixin geometricalBlockTop {
+  width: 165px;
+  height: 205px;
+  background-color: rgba(31, 219, 132, 0.1);
+  @content;
+}
+@mixin geometricalBlockBottom {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-top: 208px solid rgba(31, 219, 132, 0.1);
+  border-right: 165px solid transparent;
+  @content;
+}
+@mixin reviewsSlider {
+  width: 420px;
+  height: 500px;
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
+}
 
 $xs-screen: 480px;
 $sm-screen: 720px;
 $md-screen: 980px;
-$lg-screen: 1366px;
-$xl-screen: 1920px;
+$lg-screen: 1257px;
+$my-screen: 840px;
 
 @mixin xs-mobile {
   @media (max-width: #{$xs-screen - 0.1px}) {
@@ -46,8 +68,8 @@ $xl-screen: 1920px;
   }
 }
 
-@mixin desktop-lg {
-  @media (min-width: #{$xl-screen - 0.1px}) {
+@mixin desktop-my {
+  @media (max-width: #{$my-screen - 0.1px}) {
     @content;
   }
 }

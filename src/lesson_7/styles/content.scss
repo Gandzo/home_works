@@ -1,7 +1,8 @@
 @import "./variables.scss";
+@import "./mixin.scss";
 .content {
   width: 100%;
-  background-color: #f8f9fc;
+  margin-bottom: 150px;
 }
 .benefits {
   @include pageContainer;
@@ -9,15 +10,29 @@
   border-radius: 10px;
   background-color: $btn-default-font-color;
   box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+
   @include flexCenterVertical;
   justify-content: space-around;
   transform: translateY(-25%);
+  @include tablet {
+    width: 80%;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    padding: 20px 0;
+    transform: translateY(-10%);
+  }
   &__item {
     height: 63%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-left: 10px ;
+    @include tablet {
+      padding: 30px 0;
+      height: 350px;
+
+    }
   }
   &__icon {
     margin-bottom: 5px;
@@ -25,7 +40,7 @@
   &__line {
     width: 60px;
     height: 4px;
-    background-color: #1fdb84;
+    background-color: rgb(31, 219, 132);
   }
   &__header {
     font-size: 18px;
@@ -85,6 +100,10 @@
   &__cards {
     display: flex;
     justify-content: space-between;
+    @include tablet{
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 }
 .tariff__btns input:checked + span {
@@ -101,6 +120,13 @@
   letter-spacing: 0.2px;
   color: #5b6c94;
   transition: 0.4s;
+  @include laptop{
+    width: 300px;
+  }
+  @include tablet{
+    width: 375px;
+  }
+
   &:hover {
     background-color: #fff;
     border-top: 3px solid  #0a8aff;

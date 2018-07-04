@@ -1,6 +1,6 @@
 @import "./variables.scss";
 @import "./mixin.scss";
-$navbar-height: 110px;
+$nav-bar-height: 110px;
 $page-nav-item-margin: 30px;
 $page-nav-link-color: #ffffff;
 $logo-font-size: 26px;
@@ -12,9 +12,10 @@ $logo-font-size: 26px;
 
 }
 .page-nav {
-  height: $navbar-height ;
+  height: $nav-bar-height ;
   display: flex;
   justify-content: space-between;
+  position: relative;
  @include pageContainer;
   padding: 0 $page-container-padding;
   &__logo {
@@ -22,13 +23,32 @@ $logo-font-size: 26px;
     font-size: $logo-font-size ;
     font-weight: normal;
     @include flexCenterVertical;
+    @include  desktop-my {
+      display: none;
+    }
   }
   &__toggle {
     display: none;
+
   }
   &__menu {
     display: flex;
     justify-content: center;
+    @include desktop-my {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      background-color: $background-dark;
+      justify-content: flex-start;
+      padding: 0 15px;
+      transform: scaleY(0);
+      transition: all 0.5s;
+      transform-origin: top;
+      opacity: 1;
+    }
   }
   &__item {
     margin: 0 $page-nav-item-margin;
@@ -43,6 +63,9 @@ $logo-font-size: 26px;
 .account-panel {
   display: flex;
   align-items: center;
+  @include desktop-my{
+    display: none;
+  }
   &__btn {
     margin: 0;
   }
@@ -66,6 +89,15 @@ $logo-font-size: 26px;
     font-size: 48px;
     font-weight: bold;
     margin: 150px 0 40px;
+    @include tablet {
+      font-size: 42px;
+    }
+    @include mobile {
+      font-size: 35px;
+    }
+    @include xs-mobile {
+      font-size: 30px;
+    }
   }
   &__text {
     line-height: 2;
@@ -76,5 +108,6 @@ $logo-font-size: 26px;
 }
 .baner__info {
   color: $page-nav-link-color;
+  padding: 0 $page-container-padding;
 }
 

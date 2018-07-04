@@ -9060,11 +9060,324 @@ module.exports = __webpack_require__(340);
 "use strict";
 
 
-var user = {
-    name: 'Anna',
-    age: 27
-};
-alert(user);
+__webpack_require__(341);
+
+var _lighter = __webpack_require__(342);
+
+// const lighterElement = document.querySelector('#lighter1');
+// const lighterElement2 = document.querySelector('#lighter2');
+// const lighterElement3 = document.querySelector('#lighter3');
+//
+// lighter(lighterElement);
+// lighter(lighterElement2);
+// lighter(lighterElement3);
+
+
+// function notificationBar() {
+//     const notificationBarElement = document.querySelector('.notification-bar');
+//     const control = document.querySelector('.notification-bar__btn');
+//
+//
+//     console.log(control);
+//     console.log(notificationBarElement);
+//     function toggleMessage() {
+//         notificationBarElement.classList.toggle('notification-bar_active');
+//     }
+//     control.addEventListener('click' , toggleMessage );
+// }
+// notificationBar();
+//
+// const someBtn = document.querySelector('button');
+// const btn = document.querySelector('.btn-hello');
+// console.dir(someBtn);
+//
+// function greet() {
+//     const name = prompt ('Hello world');
+// someBtn.classList.add('.btn_toucthed');
+//     // someBtn.style.background = 'red';
+//     alert(`Hello, ${name} !`);
+// }
+// someBtn.addEventListener('click', greet);
+//
+// function hello() {
+//     alert('Hello');
+// }
+// btn.addEventListener('click', hello);
+
+//hw_9
+
+// //2
+// let user = {
+//     name: 'Вася',
+//     surname: 'Петров',
+// };
+// user.name = 'Сергей';
+// delete user.name;
+// console.log(user);
+//
+//
+// //3
+// function isEmpty(obj) {
+//     for (let key in obj) {
+//         return false;
+//     }
+//     return true;
+// }
+//
+// let value = {};
+//
+// console.log(isEmpty(value));
+//
+// value["Hello"] = "подъём";
+//
+// console.log(isEmpty(value));
+//
+//
+// //4
+// let salaries = {
+//     "John": 100,
+//     "Jack": 300,
+//     "Kate": 270,
+// };
+//
+// let sum = 0;
+// for (let name in salaries) {
+//     sum += salaries[name];
+// }
+// console.log(sum);
+//
+// //5
+// let max = 0;
+// let maxName = "";
+// for (let name in salaries) {
+//     if (max < salaries[name]) {
+//         max = salaries[name];
+//         maxName = name;
+//     }
+// }
+// console.log(maxName || "нет сотрудников");
+//
+// //6
+//
+//
+// function isNumeric(n) {
+//     return !isNaN(parseFloat(n)) && isFinite(n);
+// }
+//
+// function multiplyNumeric(obj) {
+//     for (let key in obj) {
+//         if (isNumeric(obj[key])) {
+//             obj[key] *= 2;
+//         }
+//     }
+// }
+//
+// multiplyNumeric(salaries);
+// console.log(salaries);
+//
+// //8
+// let numbers = [];
+// while (true) {
+//
+//     let value = prompt("Введите число", 0);
+//
+//     if (value === "" || value === null || isNaN(value)) break;
+//
+//     numbers.push(+value);
+// }
+//
+// let summ = 0;
+// for (let i = 0; i < numbers.length; i++) {
+//     summ += numbers[i];
+// }
+// alert(summ);
+//
+// //9
+// function find(array, value) {
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] === value) return i;
+//     }
+//
+//     return -1;
+// }
+//
+// let arrr = [5, "r", "b", 8];
+//
+// let index = find(arrr, "b");
+//
+// alert(index);
+//
+//
+// //10
+// function filterRange(arr, a, b) {
+//     let result = [];
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] >= a && arr[i] <= b) {
+//             result.push(arr[i]);
+//         }
+//     }
+//
+//     return result;
+// }
+//
+// let arr = [55, 6, 5, 4, 3, 8, 0];
+//
+// let filtered = filterRange(arr, 0, 4);
+// console.log(filtered);
+//
+//
+// //11
+// function pow(x, n) {
+//     let result = x;
+//
+//     for (let i = 1; i < n; i++) {
+//         result *= x;
+//     }
+//
+//     return result;
+// }
+//
+// let x = prompt("x?", '');
+// let n = prompt("n?", '');
+//
+// if (n <= 1) {
+//     alert('Степень ' + n +
+//         'не поддерживается, введите целую степень, большую 1'
+//     );
+// } else {
+//     alert(pow(x, n));
+// }
+
+
+var products = [{
+    title: 'test',
+    price: '2500'
+}, {
+    title: 'test',
+    price: '2500'
+}, {
+    title: 'test',
+    price: '2500'
+}];
+
+function calcTotal(param) {
+    var total = 0;
+
+    for (var i = 0; i < param.length; i++) {
+
+        var number = Number(param[i].price);
+        if (isNaN(number) === false) {
+            total += number;
+        }
+    }
+    return total;
+}
+
+var totalPrice = calcTotal(products);
+console.log(totalPrice);
+
+/***/ }),
+/* 341 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 342 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.lighter = lighter;
+
+__webpack_require__(343);
+
+// const ACTIVE_CLASS_NAME
+
+// function enableRed() {
+//     switctOff();
+//     lighterRed.classList.add('street-lighter__light_active');
+//
+// }
+// function enableYellow() {
+//     switctOff();
+//     lighterYellow.classList.add('street-lighter__light_active');
+//
+// }
+// function enableGreen() {
+//     switctOff();
+//     lighterGreen.classList.add('street-lighter__light_active');
+//
+// }
+// lighterRed.addEventListener('click', enableRed);
+// lighterYellow.addEventListener('click', enableYellow);
+// lighterGreen.addEventListener('click', enableGreen);
+// }
+function lighter() {
+    // const lighterRed = document.querySelector('.street-lighter__light_red');
+    // const lighterYellow = document.querySelector('.street-lighter__light_yellow');
+    // const lighterGreen = document.querySelector('.street-lighter__light_green');
+
+    var lights = lighterElement.querySelectorAll('.street-lighter__light');
+
+    function switchOff() {
+        for (var i = 0; i < lights.length; i++) {
+            var light = lights[i];
+            light.classList.remove('street-lighter__light_active');
+        }
+    }
+    // lighterRed.classList.remove('street-lighter__light_active');
+    // lighterYellow.classList.remove('street-lighter__light_active');
+    // lighterGreen.classList.remove('street-lighter__light_active');
+
+    function switchOn(element) {
+        console.log('Enabled');
+        element.classList.add('street-lighter__light_active');
+    }
+
+    function clickHandler(element) {
+        switchOff();
+        switchOn(element);
+    }
+
+    var _loop = function _loop(i) {
+        var light = lights[i];
+        light.addEventListener('click', function () {
+            clickHandler(light);
+        });
+    };
+
+    for (var i = 0; i < lights.length; i++) {
+        _loop(i);
+    }
+}
+
+//    lighterRed.addEventListener('click', function () {
+//        clickHandler(lighterRed)
+//    });
+//     lighterYellow.addEventListener('click', function () {
+//         clickHandler(lighterYellow)
+//     });
+//     lighterGreen.addEventListener('click', function () {
+//         clickHandler(lighterGreen)
+//     });
+// }
+//
+// const arr = ['Hello', 'World'];
+// console.log(arr);
+// arr.push('Fruite');
+// console.log(arr);
+
+/***/ }),
+/* 343 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

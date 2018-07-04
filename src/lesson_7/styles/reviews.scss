@@ -1,0 +1,63 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+.reviews {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+}
+.geometrical {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  &__title {
+    position: absolute;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #031d5b;
+    top: 90px;
+    left: 130px;
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    &:last-child {
+      margin-left: 48px;
+    }
+  }
+  &__block_top{
+    @include geometricalBlockTop{
+    }
+  }
+  &__block_bottom {
+    @include geometricalBlockBottom{
+    }
+  }
+}
+
+.background-dark {
+  width: 810px;
+  height: 100vh;
+  background-color: #313a5a;
+  position: relative;
+  &__wrapper {
+
+    display: flex;
+  }
+  &__wrapper > input {
+    display: none;
+  }
+  .slider {
+    display: flex;
+    &__slides {
+      @include reviewsSlider
+    }
+  }
+
+
+
+}

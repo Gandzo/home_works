@@ -4,10 +4,16 @@
 html {
   font-size: 16px;
   font-family: sans-serif; }
+  @media (max-width: 719.9px) {
+    html {
+      font-size: 14px; } }
 
 body, ul, ol, h1, h2, h3, h4, h5, hr, p, figure {
   padding: 0;
   margin: 0; }
+
+body {
+  background-color: #f8f9fc; }
 
 a {
   text-decoration: none; }
@@ -25,6 +31,7 @@ li {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  position: relative;
   max-width: 1257px;
   margin: 0 auto;
   padding: 0 16px; }
@@ -36,6 +43,9 @@ li {
     display: flex;
     -ms-flex-align: center;
         align-items: center; }
+    @media (max-width: 839.9px) {
+      .page-nav__logo {
+        display: none; } }
   .page-nav__toggle {
     display: none; }
   .page-nav__menu {
@@ -43,6 +53,25 @@ li {
     display: flex;
     -ms-flex-pack: center;
         justify-content: center; }
+    @media (max-width: 839.9px) {
+      .page-nav__menu {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        -ms-flex-direction: column;
+            flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        background-color: #313a5a;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+        padding: 0 15px;
+        -ms-transform: scaleY(0);
+            transform: scaleY(0);
+        transition: all 0.5s;
+        -ms-transform-origin: top;
+            transform-origin: top;
+        opacity: 1; } }
   .page-nav__item {
     margin: 0 30px;
     display: -ms-flexbox;
@@ -61,6 +90,9 @@ li {
   display: flex;
   -ms-flex-align: center;
       align-items: center; }
+  @media (max-width: 839.9px) {
+    .account-panel {
+      display: none; } }
   .account-panel__btn {
     margin: 0; }
 
@@ -83,13 +115,23 @@ li {
     font-size: 48px;
     font-weight: bold;
     margin: 150px 0 40px; }
+    @media (max-width: 979.9px) {
+      .baner__main-header {
+        font-size: 42px; } }
+    @media (max-width: 719.9px) {
+      .baner__main-header {
+        font-size: 35px; } }
+    @media (max-width: 479.9px) {
+      .baner__main-header {
+        font-size: 30px; } }
   .baner__text {
     line-height: 2; }
   .baner__btn {
     margin-top: 70px; }
 
 .baner__info {
-  color: #ffffff; }
+  color: #ffffff;
+  padding: 0 16px; }
 
 .btn {
   border: none;
@@ -115,7 +157,7 @@ li {
 
 .content {
   width: 100%;
-  background-color: #f8f9fc; }
+  margin-bottom: 150px; }
 
 .benefits {
   max-width: 1257px;
@@ -132,6 +174,17 @@ li {
       justify-content: space-around;
   -ms-transform: translateY(-25%);
       transform: translateY(-25%); }
+  @media (max-width: 979.9px) {
+    .benefits {
+      width: 80%;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      height: 100%;
+      padding: 20px 0;
+      -ms-transform: translateY(-10%);
+          transform: translateY(-10%); } }
   .benefits__item {
     height: 63%;
     display: -ms-flexbox;
@@ -141,6 +194,10 @@ li {
     -ms-flex-pack: justify;
         justify-content: space-between;
     padding-left: 10px; }
+    @media (max-width: 979.9px) {
+      .benefits__item {
+        padding: 30px 0;
+        height: 350px; } }
   .benefits__icon {
     margin-bottom: 5px; }
   .benefits__line {
@@ -201,6 +258,12 @@ li {
     display: flex;
     -ms-flex-pack: justify;
         justify-content: space-between; }
+    @media (max-width: 979.9px) {
+      .tariff__cards {
+        -ms-flex-direction: column;
+            flex-direction: column;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
 
 .tariff__btns input:checked + span {
   background-color: #ffffff; }
@@ -220,6 +283,12 @@ li {
   letter-spacing: 0.2px;
   color: #5b6c94;
   transition: 0.4s; }
+  @media (max-width: 1256.9px) {
+    .card {
+      width: 300px; } }
+  @media (max-width: 979.9px) {
+    .card {
+      width: 375px; } }
   .card:hover {
     background-color: #fff;
     border-top: 3px solid  #0a8aff;
@@ -237,3 +306,100 @@ li {
   .card__text li {
     text-align: center;
     padding-bottom: 1rem; }
+
+.reviews {
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
+
+.geometrical {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  position: absolute;
+  top: 50px;
+  left: 100px; }
+  .geometrical__title {
+    position: absolute;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #031d5b;
+    top: 90px;
+    left: 130px; }
+  .geometrical__block {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: start;
+        justify-content: flex-start; }
+    .geometrical__block:last-child {
+      margin-left: 48px; }
+  .geometrical__block_top {
+    width: 165px;
+    height: 205px;
+    background-color: rgba(31, 219, 132, 0.1); }
+  .geometrical__block_bottom {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-top: 208px solid rgba(31, 219, 132, 0.1);
+    border-right: 165px solid transparent; }
+
+.background-dark {
+  width: 810px;
+  height: 100vh;
+  background-color: #313a5a;
+  position: relative; }
+  .background-dark__wrapper {
+    display: -ms-flexbox;
+    display: flex; }
+  .background-dark__wrapper > input {
+    display: none; }
+  .background-dark .slider {
+    display: -ms-flexbox;
+    display: flex; }
+    .background-dark .slider__slides {
+      width: 420px;
+      height: 500px;
+      border-radius: 6px;
+      -webkit-backdrop-filter: blur(10px);
+              backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3); }
+
+.footer {
+  width: 100%;
+  height: 500px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-top: 200px;
+  margin-bottom: 50px; }
+  .footer__icons {
+    width: 75%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    margin-bottom: 100px; }
+  .footer span a {
+    color: #5b6c94; }
+  .footer_bottom span {
+    margin: 0 20px; }
+  .footer span {
+    line-height: 2;
+    color: #5b6c94; }
+  .footer__icon-title {
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #031d5b; }

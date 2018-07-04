@@ -9053,11 +9053,32 @@ module.exports = __webpack_require__(331);
 
 __webpack_require__(332);
 
-var user = {
-    name: 'Anna',
-    age: 27
-};
-alert(user.name, ' ' + user.age, ' ');
+//
+// let i = 0;
+// while (i<= 100) {
+//     console.log (i);
+//     i++;
+// }
+//
+// for(let i=0; i < 100; i++);
+// console.log (i);
+
+//
+// const name = prompt ('Enter your name', '');
+// if (name === 'admin') {
+//     console.log('hello world');
+// } else {
+//     console.log('hello user');
+// }
+
+var someBtn = document.querySelector('button');
+console.log(someBtn);
+function greet() {
+    var name = prompt('Hello world');
+    alert('Hello, ' + name + ' !');
+}
+
+someBtn.addEventListener('click', greet);
 
 /***/ }),
 /* 332 */
